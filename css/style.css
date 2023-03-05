@@ -1,0 +1,47 @@
+
+.hamburger{
+  font-size: 30px;
+  text-align: center;
+  list-style-type: none;
+  width: 50px;
+  background-color: #02c39a;
+  border-radius: 5px;
+  float: right;
+  color: #eee;
+  
+} .hamburger:hover{
+  color: black;
+  cursor: pointer;
+}
+
+.modal{
+  display: block;
+  position: fixed;
+  z-index: 1;
+  background: #00a896;
+  width: 30%;
+ cursor: none;
+}
+.close{
+  float: right;
+  font-size: 27px;
+  color: #02c39a;
+  margin-top: -60px;
+  margin-right: 20px;
+  background: white;
+  border-radius: 5px;
+  width: 30px;
+  text-align: center;
+
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1{
+  margin-left: 20px;
+  color: white;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+
+	.form{
+		font-family: sans-serif;
+		font-size: 20px;
+		padding: 20px;
+		background: #00a6fb;
+		border-radius: 5px;
+		color: white;
+		width: 200px;
+		margin-top: 30%;
+		margin-left: 30%;
+		b
+		
+	}	
+
+	.button{
+		background: #07beb8;
+		width: 400px;
+		height: 450px;
+		border-radius: 8px;
+	}
+	h1{font-family: arial;
+		font-size: 20px;
+		color: white;
+		margin-left: 20PX;
+		padding: 12px;
+	}
+
+	.close{
+         border: none;
+		float: right;
+		font-size: 40px;
+		margin-top: -60px;
+		margin-right: 20px;
+		color: white;
+	}
+
+
+		.close:hover{
+		color: #eee;
+		cursor: pointer;
+		}
+
+
+
+		  .action{
+		position: absolute;
+		z-index: 5;
+		margin-top: 30px;
+		border-radius: 5px;
+
+	}
+	input[name="firstname"]{
+		border: none;
+		width: 350px;
+		height: 40px;
+		margin-left: 20px;
+		border-radius: 5px;	
+		background: none;
+		border: 1px solid white;
+	}
+		input[name="lastname"]{
+		border: none;
+		width: 350px;
+		height: 40px;
+		margin-top: 30px;
+		margin-left: 20px;
+		border-radius: 5px;	
+		align-items: center;
+		background: none;
+		border: 1px solid white;
+	}
+	input[type="date"]{
+		border: none;
+		width: 350px;
+		height: 40px;
+		margin-top: 30px;
+		background: none;
+		border: 1px solid white;
+		border-radius: 5px;	
+		align-items: center;
+		text-align: center;
+		padding: 1px;
+	}
+		input[type="submit"]{
+		padding: 15px;
+		text-align: center;
+		font-size: 20px;
+		border: none;
+		width: 100px;
+		margin-top: 30px;
+		margin-left: 120px;
+	    background: #80ffdb;
+	    border-radius: 5px;
+	    border-radius: 5px;
+
+	} .span{
+		margin-top: 10%;
+	}
+	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>modalform</title>
+</head>
+<body>
+<div class="span">
+	<span id="form-btn" class="form">schule weekly</span>
+
+	<div id="my-form" class="button">
+
+		<div class="form-heard">
+		<h1>close</h1>
+		<span class="close">&times;</span>
+	</div>
+
+	<form class="action">
+	<input type="text" name="firstname"><br>
+	<input type="text" name="lastname"><br>
+	<input type="date"name="lastname"><br>
+	<input type="time"name="lastname"><br>
+	<input type="submit" name="" value="login"><br>
+		
+
+
+	</form>
+</div>
+</div>
+<script>
+	//get dom element
+const form = document.querySelector('#my-form')
+const formBtn = document.querySelector('#form-btn')
+const closeBtn = document.querySelector('.close')
+
+//event
+formBtn.addEventListener('click', openForm)
+closeBtn.addEventListener('click', closeForm)
+window.addEventListener('click', outsideClick)
+
+
+//open
+function openForm() {
+ form.style.display = 'block';
+}
+//close
+function closeForm() {
+ form.style.display = 'none';
+}
+//outside close
+function outsideClick(e) {
+	if(e.target == form){
+		form.style.display = 'none';
+	}
+}
+</script>
+
+</body>
+</html>

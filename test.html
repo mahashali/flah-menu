@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body{
+  background: #eee;
+}
+.hamburger{
+ list-style-type: none;
+  font-size: 30px;
+  margin-left: 20%;
+  width: 40px;
+  background: #02c39a;
+  border-radius: 5px;
+ text-align: center;
+  color: #eee;
+  display: block;
+}
+
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 15%;
+  top: 20%;
+  width: 18%;
+  background: #00a896;
+  border-radius: 10px;
+  color: white;
+  
+}
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.close {
+ float: right;
+ margin-right: 20px;
+  font-size: 50px;
+  color: #fff;
+ display: block;
+
+}
+
+.close:hover,
+.close:focus {
+  color: #eee;
+  text-decoration: none;
+  cursor: pointer;
+}
+h2{
+  margin-left: 20px;
+}
+.row{
+  display: flex;
+}
+ .row ul  {
+   display: inline-block;
+ }
+ .row li {
+
+  list-style-type: none;
+  display: inline-block;
+  padding: 15px;
+  color: #fff;
+ }
+
+ .row ul li a{
+  font-family: arail;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  text-decoration: none;
+
+ }
+
+
+ @media(max-width: 414px){
+
+  .hamburger{
+ list-style-type: none;
+  font-size: 30px;
+  margin-left: 20%;
+  width: 40px;
+  background: #02c39a;
+  border-radius: 5px;
+ text-align: center;
+  color: #eee;
+  display: block;
+}
+  .modal{
+    width: 70%;
+    margin-top: -20px;
+    margin-left: 10%;
+
+  }
+ .close {
+  float: right;
+ margin-right: 20px;
+font-size: 50px;
+color: #fff;
+ display: block;
+
+}
+.row ul{
+  display: flex;
+  flex-direction: column;
+
+}
+
+ }
+
+
+	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>modal</title>
+</head>
+<body>
+	<span id="modal-btn" class=""><li class="hamburger">&#x2630;</li></span>
+
+
+<div id="my-modal" class="modal">
+       
+    
+    <div class="row">
+        <ul style="margin-top: 40px;">
+          <li><a href="">homae</a></li>
+          <li><a href="">about</a></li>
+          <li><a href="">conatact</a></li>
+          <li><a href="">login</a></li>
+        </ul>
+        <h1>superhit</h1>
+    <span class="close">&times;</span>
+</div>
+
+  <script>
+  // Get DOM Elements
+const modal = document.querySelector('#my-modal');
+const modalBtn = document.querySelector('#modal-btn');
+const closeBtn = document.querySelector('.close');
+
+// Events
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick);
+
+// Open
+function openModal() {
+  modal.style.display = 'block';
+}
+
+// Close
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// Close If Outside Click
+function outsideClick(e) {
+
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+
+}
+
+
+  </script>
+
+</body>
+</html>
